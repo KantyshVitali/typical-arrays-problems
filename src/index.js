@@ -6,7 +6,9 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-	
+	return ((array === undefined || array.length === 0) || 
+	!Array.isArray(array)) ? 0 :
+	 Math.max.apply(null, array);
 }
 
 exports.avg = function avg (array) {
